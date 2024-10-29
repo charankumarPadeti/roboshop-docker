@@ -5,6 +5,6 @@ WORKDIR /opt/server
 ENV MONGO=true
 COPY package.json /opt/server/
 COPY server.js /opt/server/
-#dependices ni install chestundhi
+#dependences ni install chestundhi
 RUN npm install
 CMD ["node", "server.js"]
