@@ -39,3 +39,6 @@ services: #services is nothing but containers
     - catalogue
     - redis
 
+  mysql:
+    image: mysql:1
+
