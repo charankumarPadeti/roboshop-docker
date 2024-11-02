@@ -7,11 +7,13 @@ services: #services is nothing but containers
   #docker run -d --name mongodb --network=roboshop mongodb:1
   mongodb:
     image: mongodb:1
+    container_name: mongodb
     # networks:
     #   -roboshop
 
   catalogue: #this is container name
     image: catalogue:1 #image is pulling from internet
+    container_name: catalogue
     # networks:
     #   - roboshop
     depends_on:
@@ -19,6 +21,7 @@ services: #services is nothing but containers
 
   web:
     image: web:1
+    container_name: web
     ports:
     - "80:80"
     depends_on:
@@ -26,19 +29,23 @@ services: #services is nothing but containers
 
   redis:
     image: redis
+    container_name: redis
 
   user:
     image: user:1
+    container_name: user
     depends_on:
     - redis
     - mongodb
 
   cart:
     image: cart:1
+    container_name: cart
     depends_on:
     - catalogue
     - redis
 
   mysql:
     image: mysql:1
+    container_name: mysql
 
