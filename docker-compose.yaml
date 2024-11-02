@@ -27,7 +27,14 @@ services: #services is nothing but containers
   redis:
 
   user:
-  image: user:1
-  depends_on:
-  - redis
-  - mongodb
+    image: user:1
+    depends_on:
+    - redis
+    - mongodb
+
+  cart:
+    image: cart:1
+    depends_on:
+    - catalogue
+    - redis
+
