@@ -23,3 +23,5 @@ services: #services is nothing but containers
     - "80:80"
     depends_on:
     - catalogue
+
+  redis:
