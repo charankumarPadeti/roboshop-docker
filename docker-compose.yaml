@@ -1,8 +1,8 @@
 #search in google docker compose network
 networks:
   default:
-    external: true
-    name: roboshop
+    external:
+      name: roboshop
 services: #services is nothing but containers
   #docker run -d --name mongodb --network=roboshop mongodb:1
   mongodb:
