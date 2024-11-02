@@ -10,8 +10,8 @@ services: #services is nothing but containers
     # networks:
     #   -roboshop
 
-  catalogue:
-    image: catalogue:1
+  catalogue: #this is container name
+    image: catalogue:1 #image is pulling from internet
     # networks:
     #   - roboshop
     depends_on:
@@ -25,6 +25,7 @@ services: #services is nothing but containers
     - catalogue
 
   redis:
+    image: redis
 
   user:
     image: user:1
